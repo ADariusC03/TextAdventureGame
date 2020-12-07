@@ -20,6 +20,7 @@ if age >= 18:
     print('')
 
     choice = input('You are walking down a long road and come across a fork in the road. you have two paths but One choice to make what do you pick. Left or Right (left/right) ')
+    print('')
     if choice == 'left':
       ans = input("You walk the left path, a gentle breeze and sun comes out. Walking along the path you see a villiage. Do you want to head that way or keep going? (village/walk) ")
       print('')
@@ -32,12 +33,11 @@ if age >= 18:
         print('')
         health -= 5
 
-      answer = input(' You wake up to notice a bag is over your head with you hands tied behind the chair your sitting in. Noises of footstep leave from the room. Do you try to escape or do nothing? (nothing/escape) ')
+      answer = input(' You wake up to notice a bag is over your head with you hands tied behind the chair your sitting in. Noises of footstep leave from the room. Do you try to escape or do nothing? (nothing/escape) ').lower()
       print('')
 
       if answer == 'nothing':
         print('20 minutes passes and random footsteps come in. Many people are asking you questions and shouting until its complete silence and BOOM ... shotgun shot in the chest. ')
-        print('')
         health -= 15
         if health <= 0:
           print('You have 0 health left ... GAME OVER!! ')
@@ -56,7 +56,6 @@ if age >= 18:
         print('')
       elif free == 'upstairs':
         print('Before going upstairs you grab a', weapon, 'and start creeping upstairs. You notice a bandit at the top of the stairs and you strike him. AHHHHHH, with a loud scream another bandit comes. Shooting you drop the ', weapon, 'before you make it out the house to run into the woods. You lose 5 health. ')
-        print('')
         health -= 5
         if health <= 0:
           print('You have 0 health left ... GAME OVER!! ')
@@ -69,7 +68,6 @@ if age >= 18:
 
       if woods == 'swim':
         print('You go into the water and take a deep dive submerging into the lake to be undetected in the water. Bandits come to the lake; Looking around and turn back. You see an electric eel curl around your leg as you try to swim. Shocking you, you lose 5 health. ')
-        print('')
         health -= 5
         if health <= 0:
           print('You have 0 health left ... GAME OVER!! ')
@@ -85,11 +83,9 @@ if age >= 18:
 
       if cabin == 'enter':
         print('You walk in and search the fridge for food. You are full. You fall asleep on the couch. You gain 5 health. ')
-        print('')
         health += 5
       elif cabin == 'outside': 
         print('You decide to sleep outside. Hungry and cold during the night you lose 5 heath. ')
-        print('')
         health -= 5
         if health <= 0:
           print('You have 0 health left ... GAME OVER!! ')
@@ -102,7 +98,6 @@ if age >= 18:
 
         if hide == 'greet':
             print('You stand there and wave Hello to them. THe six cultist look at you crazy and start shooting up the place. Two bullets graze you as you run amongst the place. Lost 5 health. ')
-            print('')
             health -= 5
             if health <= 0:
               print('You have 0 health left ... GAME OVER!! ')
@@ -118,7 +113,6 @@ if age >= 18:
 
         if shot == "shoot":
           print('You line up the rifle to get a good shot. One cultist leaves to check somewhhere else and 1 minutes after .. BAM one shot fired off at the cultist near you to the head. Time to climb down and move to another spot.')
-          print('')
           rifle -= 1
         elif shot == "quiet":
           print('You sneak around through the tall grass. Making sure your not seen by the enemy. As they walk one way you crawl another.  ')
@@ -128,11 +122,9 @@ if age >= 18:
 
         if gen == 'diversion':
           print('Gathering small twigs, dry leaves and forest duff. You see lighter fuel and a match and start a fire. Minutes later after creating a smoke signal two cultist show up. in the tall grass you line up shot on one and BANG. Through the neck one falls as the other start shooting in panic. ')
-          print('')
           rifle -= 1
         elif gen == 'supply':
           print('You ramage through the tents and find nothing. Only shelter for the time being until one cultist peeks in and gets startled to see you there. Before he could grab his gun you shoot and kill him. Running out the tent you spot another one and aim and shoot. BANG through the head.')
-          print('')
           rifle -= 2
 
         fire = input('Running through the tall grass towards the cabin, again. You mistakenly ran in a circle. Footsteps are approaching quickly, will you fight or hide again? (fight/hide) ').lower()
@@ -140,7 +132,6 @@ if age >= 18:
 
         if fire == 'fight':
           print('You stand ground to face three more cultist. BANG! BANG! two drop as one shot you thru the shoulder. You lose 5 health.')
-          print('')
           health -= 5
           rifle -= 2
           if rifle <= 0:
@@ -157,7 +148,6 @@ if age >= 18:
 
         elif fire == 'hide':
           print('Cowarding with a gun in your hand ... You make your way into the rotting smelling cabin only to hide into the bedroom. Doors lock. The cultist Run in the house banging and knocking on the door. You open the window and jump out only to get a good angle on them through the dinning room window. Firing off two shots each BANG BANG!')
-          print('')
           rifle -= 2
           if rifle <= 0:
             print('You ran outta bullets.')
@@ -169,7 +159,6 @@ if age >= 18:
 
         if come_back == 'car':
           print('You go inside the car and see the keys in the ignition. Cranking the car up you blow up into pieces. ')
-          print('')
           health -= 15
           if health <= 0:
             print('You have 0 health left ... GAME OVER!! ')
@@ -179,6 +168,7 @@ if age >= 18:
           print('You walk the lonely, dark road until the suns comes up. You see a sign that says Welcome to Atlantic City.')
 
         trap = input('Making it across city lines. You travel farther unto the road to see your home close by. Making final steps you approach the yard. Do you walk towards the house or go to a diner to eat? (home/diner) ').lower()
+        print()
 
         if trap == 'home':
           print('You walk onto the lawn and without knowing you trigger a bomb. You put the key into the key hole to unlock the door and BOOMMM! ')
@@ -191,11 +181,12 @@ if age >= 18:
           print('You look closer at the ground and see a trip wire and decides to go somewhhere else. Hungry you decied to go to a diner.')
 
         winner = input('Walking to the diner you walk inside and other a All-Star Platter with coffee to perk you up. After a long few days of surviving you deserve this break in life to relax and kick back. For A NEW Journey Awaits. (Done/Credit) ').lower()
+        print('')
 
         if winner == 'done':
-          print('Thank You For Playing!! Hope To See You Again!! Cya!!')
+          print('GAME OVER WINNER!! Thank You For Playing!! Hope To See You Again!! Cya!!')
         elif winner == 'credit':
-          print(' Special Thanks To', name, 'for playing the game all the way through and not giving up. Luck was on your side. Thank You!!!!')
+          print(' Special Thanks To You,', name, 'for playing the game all the way through and not giving up. Luck was on your side. Hope You Enjoyed, Thank You!!!!')
 
 
 
