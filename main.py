@@ -1,4 +1,9 @@
-print("Welcome   ")
+from pyfiglet import figlet_format
+from termcolor import colored
+
+title = figlet_format("Survive / Fate", font="roman")
+color = colored(title, 'red')
+print(color)
 print('')
 
 name = input('What is your name? ')
